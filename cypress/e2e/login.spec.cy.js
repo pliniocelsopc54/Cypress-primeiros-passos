@@ -1,8 +1,4 @@
-
-//Teste de login com sucesso
-
 describe('Orange HRM Tests', () => {
-
   const selectorsList = {
     usernameField: "[name='username']",
     passwordField: "[name='password']",
@@ -10,6 +6,9 @@ describe('Orange HRM Tests', () => {
     secionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",  //oxd-topbar-header-breadcrumb-module
     WrongCredencialAlert: ".oxd-alert"
   }
+
+
+  //Teste de login com sucesso
 
   it('Login - Success', () => {  //it.skip -> pula a funcao
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -20,8 +19,8 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.secionTitleTopBar).contains('Dashboard')
   })
 
-//Cenario de login sem sucesso
 
+//Cenario de login sem sucesso
 
   it('Login - Fail', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
