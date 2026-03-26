@@ -48,7 +48,6 @@
     "common-tags": "^1.8.2",
     "core-util-is": "^1.0.2",
     "cross-spawn": "^7.0.6",
-    "cypress": "^15.11.0",
     "dashdash": "^1.14.1",
     "dayjs": "^1.11.19",
     "debug": "^4.4.3",
@@ -172,5 +171,8 @@
     "wrap-ansi": "^7.0.0",
     "wrappy": "^1.0.2",
     "yauzl": "^2.10.0"
+  },
+  "devDependencies": {
+    "cypress": "^15.12.0"
   }
 }
