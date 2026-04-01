@@ -4,6 +4,10 @@ import DashboardPage from '../cypress/pages/dashboardPage.js'
 import MenuPage from '../cypress/pages/menuPage.js'
 import MyInfoPage from '../cypress/pages/myInfoPage.js'
 
+const Chance = require('chance');
+const chance = new Chance();
+
+
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
 const menuPage = new MenuPage()
@@ -24,8 +28,8 @@ describe('Orange HRM Tests', () => {
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
     dashboardPage.checkDashboardPage()
     menuPage.accessMyInfo()   
-    myInfoPage.fillPersonalDetails('My First', 'Fone', 'JBL')    
-    myInfoPage.fillEmployeeDetails('EmployId', 'OtherId', '123456', '2026-26-03')    
+    myInfoPage.fillPersonalDetails(chance.first({gender: "male", nacionality: "it"}), chance.first({middle: true, gender: "male", nacionality: "it"}), chance.last({gender: "female"}))    
+    myInfoPage.fillEmployeeDetails('EmployId', chance.integer({min: 0, max: 99999}), chance.integer({min: 0, max: 100}), '2026-26-03')    
     myInfoPage.fillStatus()
     myInfoPage.saveform()
     myInfoPage.fillCustonField()   
