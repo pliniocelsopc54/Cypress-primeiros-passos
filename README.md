@@ -8,3 +8,12 @@ this project utilizes Cypress to automate the testing of a login feature and a u
 >**NOTE:**
 >
 > it's necessary to have **node** installed
+
+## Runnig
+```bash
+# You open the Cypress UI
+npx cypress open
+
+# Run the automation by command line
+npx cypress run
+```
