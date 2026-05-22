@@ -1,7 +1,15 @@
 {
   "name": "cypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "this project utilizes Cypress to automate the testing of a login feature and a user update feature. Cypress is a Javascript-based end-to-end testing framework that allows developers to write tests and execute them a real browser.",
+  "homepage": "https://github.com/pliniocelsopc54/Cypress-primeiros-passos#readme",
+  "bugs": {
+    "url": "https://github.com/pliniocelsopc54/Cypress-primeiros-passos/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pliniocelsopc54/Cypress-primeiros-passos.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "commonjs",
@@ -174,6 +182,6 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "cypress": "^15.12.0"
+    "cypress": "^15.13.1"
   }
 }

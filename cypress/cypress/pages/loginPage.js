@@ -8,11 +8,9 @@ class LoginPage {
         }
         return selectors
     }    
-
     accessLoginPage() {
         cy.visit('/auth/login')    
     }
-
     loginWithUser(username, password) {
         cy.get(this.selectorsList().usernameField).clear().type(username)
         cy.get(this.selectorsList().passwordField).clear().type(password)
@@ -21,7 +19,5 @@ class LoginPage {
     checkAccessInvalid() {
         cy.get(this.selectorsList().WrongCredencialAlert)   
     }
-
-
 }
 export default LoginPage
